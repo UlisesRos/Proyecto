@@ -1,0 +1,35 @@
+
+main{
+    height: 700px;
+    margin: 0 100px;
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    grid-template-rows: 70% 1fr;
+    grid-template-areas:
+    "section1 section2"
+    "section3 section3";
+}
+
+.section1{
+    grid-area: section1;
+}
+.section2{
+    grid-area: section2;
+}
+.section3{
+    grid-area: section3;
+}
+
+@media (max-width: 450px){
+    main{
+        width: 375px;
+        grid-template-columns: 375px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "section1"
+        "section2"
+        "section3";
+        margin: 0;
+        justify-items: center;
+    }
+}

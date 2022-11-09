@@ -1,0 +1,167 @@
+@import "../utilities/variables.scss";
+
+header section{
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    font-family: $primaria;
+    font-size: $tamañoParrafo;
+
+        .menu, .menu2{
+            display: none;
+        }
+        @media (max-width: 450px){
+            .menu{
+                display: inline;
+            }
+        }
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 500px;
+
+                li{
+                    list-style: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $azulGrisO;
+                        }
+                        a:hover{
+                            color: $rojoSuave;
+                        }
+                }
+        }
+        @media (max-width: 450px){
+            nav{
+                width: 60%;
+                height: 1000px;
+                position: relative;
+                left: 135px;
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                row-gap: 60px;
+                margin-top: 900px;
+                padding-top: 30px;
+                background-color: white;
+                display: none;
+            }   
+            ul{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                row-gap: 30px;
+                margin-left: 30px;
+                font-size: 20px;
+            }
+            .menu2{
+                width: 35px;
+                align-self: flex-end;
+                margin-right: 30px;
+                display: inline;
+            }
+        }
+
+}
+
+@media (max-width: 450px){
+    header{
+        width: 375px;
+        
+        section{
+            margin: 0 30px;
+        }
+    }
+}
+
+
+//Entrada de barra navegacion
+
+.scale-in-hor-right {
+	-webkit-animation: scale-in-hor-right 0.8s ;
+	        animation: scale-in-hor-right 0.8s ;
+            display: inline;
+            display: flex;
+            flex-direction: column;
+            row-gap: 60px;
+}
+
+@-webkit-keyframes scale-in-hor-right {
+    0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+    100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+}
+@keyframes scale-in-hor-right {
+    0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+    100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+}
+
+//Salida de la barra de navegacion
+
+.scale-out-hor-right {
+	-webkit-animation: scale-out-hor-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-hor-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes scale-out-hor-right {
+    0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+    100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+}
+@keyframes scale-out-hor-right {
+    0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+    100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+    }
+}
+

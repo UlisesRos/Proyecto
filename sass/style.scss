@@ -1,0 +1,9 @@
+@import "../sass/base/reset.scss";
+@import "../sass/layout/header.scss";
+@import "../sass/utilities/variables.scss";
+@import "../sass/layout/grid.scss";
+@import "../sass/layout/sections.scss";
+
+body{
+    background-color: $fondo;
+}

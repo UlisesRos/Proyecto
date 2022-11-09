@@ -1,0 +1,199 @@
+
+.section1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "imagen imagen"
+    "h2 divisor";
+
+    h2{
+        margin: 15px 15px 15px 0px;
+        grid-area: h2;
+        width: 180px;
+        font-family: $primaria;
+        color: $azulOsc;
+        font-size: 35px;
+    }
+    @media (max-width: 450px){
+        h2{
+            margin: 20px 0 0 0;
+            width: 275px;
+
+            br{
+                display: none;
+            }
+        }
+    }
+    div{
+        margin: 15px 0px 15px 15px;
+        grid-area: divisor;
+        justify-self: center;
+        font-family: $primaria;
+        font-size: $tamañoParrafo;
+        color: $azulGrisO;
+
+            button{
+                margin-top: 15px;
+                padding: 6px 20px;
+                font-family: $primaria;
+                font-size: $tamañoParrafo;
+                color: $fondo;
+                background-color: $azulOsc;
+                cursor: pointer;
+                border: none;
+            }
+            button:hover{
+                background-color: $rojoSuave;
+                border: none;
+            }
+    }
+    @media (max-width: 450px){
+        div{
+            margin: 20px 0 0 0;
+            width: 300px;
+            justify-self: start;
+
+        }
+    }
+
+    img{
+        grid-area: imagen;
+        width: 100%;
+    }
+    @media (max-width: 450px){
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    }
+    @media (max-width: 450px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 180px 180px;
+        grid-template-areas: 
+        "imagen"
+        "h2"
+        "divisor";
+    }
+}
+
+.section2{
+    margin: 0px 50px 50px 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $azulOsc;
+    
+        h3{
+            color: $naranjaSuave;
+            font-family: $primaria;
+            font-size: 25px;
+        }
+        
+        div{
+            color: $fondo;
+            font-family: $primaria;
+            font-size: $tamañoParrafo;
+
+            p{
+                color: $azulGrisC;
+                margin-top: 10px;
+            }
+            @media (max-width: 950px){
+                p{
+                    overflow: scroll;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $fondo;
+            }
+            a:hover{
+                color: $naranjaSuave;
+            }
+        }
+        @media (max-width: 950px){
+            div{
+                overflow: scroll;
+            }
+        }
+}
+@media (max-width: 450px){
+    .section2{
+        margin: 20px 0 50px 0;
+        width: 300px;
+
+        h3{
+            margin-bottom: 10px;
+        }
+        div{
+            margin: 10px 0 10px 0;
+        }
+    }
+}
+
+
+.section3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+
+        .div1{
+            width: 350px;
+            height: 180px;
+            display: flex;
+            
+            div{
+                display: flex;
+                flex-direction: column;
+                row-gap: 28px;
+                margin-left: 15px;
+            }
+
+            h3{
+                color: $azulGrisO;
+                font-family: $primaria;
+                font-size: 22px;
+            }
+            p{
+                color: $azulGrisO;
+                font-family: $primaria;
+                font-size: 15px;
+            }
+            a{
+                text-decoration: none;
+                color: $azulOsc;
+                font-family: $primaria;
+                font-size: $tamañoParrafo;
+            }
+            a:hover{
+                color: $rojoSuave
+            }
+
+            img{
+                width: 150px;
+                height: 180px;
+            }
+        };
+        
+
+    @media (max-width: 450px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 25px;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        .div1{
+            width: 300px;
+        }
+    }
+}
+@media (max-width: 950px){
+        .section3{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }    
+}
